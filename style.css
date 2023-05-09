@@ -1,0 +1,35 @@
+html{
+    line-height: 1.15;
+}
+title{
+    position:sticky;
+}
+body{
+    background-color: blue;
+    color: aquamarine;
+}
+input{
+    background-color: darkcyan;
+    position:relative;
+    left: 100px;
+    top: 90px;
+    box-sizing: 20px;
+}
+
+li{
+    font-size: large;
+    color: purple;
+}
+h1 {
+    font-size: larger;
+}
+
+ul {
+    position: fixed;
+    bottom: 0;
+}
+button{
+    position: relative;
+    left: 100px;
+    top: 90px;
+}
