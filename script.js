@@ -2,7 +2,7 @@
 // variables
 var weatherInp = document.getElementById("weather-input");
 var searchBut = document.getElementById("search");
-var queryURL = "http://api.openweathermap.org/data/2.5/weather?q="
+var queryURL = "http://api.openweathermap.org/data/2.5/weather?"
 var APIkey = "869e9a32e52cb52888984677937a5d9c";
 var temp;
 var wc;
@@ -27,13 +27,23 @@ fetch(requestURL)
     latLi.textContent = data[0].lat;
     lonLi.textContent = data[0].lon;
     console.log(latLi);
-    getWeather();
+    getWeather(data);
 }
 )
+
 // 2nd API call using LAT and LON
 function getWeather(data){
-    var weatherURL = queryURL + "lat="+data[0].lat+"lon="+data[0].lon +"&limit=5&appid="
+    var lat = data[0].lat;
+    var lon = data[0].lon;
+    var weatherURL = queryURL + "lat="+lat+"lon="+lon +"&appid="+ APIkey;
     console.log(weatherURL);
+    fetch(weatherURL)
+    .then(function (response){
+        return response.json();
+    })
+    .then(function (data){
+        console.log(data);
+    })
 }
 }
 searchBut.addEventListener("click", showLondon,)
