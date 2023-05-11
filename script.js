@@ -28,11 +28,13 @@ fetch(requestURL)
     lonLi.textContent = data[0].lon;
     console.log(latLi);
     getWeather(data);
-    //fiveForecast(data);
+    fiveForecast(data);
 }
 )
-function fiveForecast(){
-    var forecastURL = "api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}"
+function fiveForecast(data){
+    var lat = data[0].lat;
+    var lon = data[0].lon;
+    var forecastURL = "api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&appid="+APIkey;
     fetch(forecastURL)
     .then(function(response){
         return response.json();

@@ -4,6 +4,11 @@ html{
 title{
     position:sticky;
 }
+tbody{
+    position: relative;
+    right: 100px;
+    bottom: 0px;
+}
 body{
     background-color: blue;
     color: aquamarine;
@@ -11,7 +16,7 @@ body{
 input{
     background-color: darkcyan;
     position:relative;
-    left: 100px;
+    left: 600px;
     top: 90px;
     box-sizing: 20px;
 }
@@ -30,6 +35,6 @@ ul {
 }
 button{
     position: relative;
-    left: 100px;
+    left: 600px;
     top: 90px;
 }
