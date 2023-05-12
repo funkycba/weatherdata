@@ -1,5 +1,6 @@
 html{
     line-height: 1.15;
+    width: fit-content;
 }
 title{
     position:sticky;
@@ -10,8 +11,9 @@ tbody{
     bottom: 0px;
 }
 body{
-    background-color: blue;
+    background-color:darkblue;
     color: aquamarine;
+    flex: auto;
 }
 input{
     background-color: darkcyan;
@@ -23,7 +25,7 @@ input{
 
 li{
     font-size: larger;
-    color:indigo;
+    color:lemonchiffon
 }
 h1 {
     font-size: larger;
@@ -31,10 +33,15 @@ h1 {
 
 ul {
     position: fixed;
-    bottom: 0;
+    bottom: 50px;
 }
 button{
+    
     position: relative;
     left: 600px;
     top: 90px;
 }
+footer{
+    justify-content:right;
+}
+
